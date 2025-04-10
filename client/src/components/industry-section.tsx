@@ -22,13 +22,13 @@ const industries = [
 
 const IndustrySection: React.FC = () => {
     return (
-        <section className="bg-gray-100">
+        <section className="bg-gray-700">
             <div className="2xl:py-12 py-10 w-full mx-auto flex flex-col items-center">
                 <div className="text-center">
-                    <h3 className="text-3xl lg:text-4xl 2xl:text-5xl font-bold text-black mb-4">
-                        <span className="text-[#ED1E3A]">Delivering Versatile Web Solutions for </span> Diverse Industries
+                    <h3 className="text-3xl lg:text-4xl 2xl:text-5xl font-bold text-white mb-4">
+                        Delivering Versatile Web Solutions for <span className="text-red-600"> Diverse Industries</span>
                     </h3>
-                    <p className="2xl:text-lg lg:text-base text-sm text-black leading-7 mb-8">
+                    <p className="2xl:text-lg lg:text-base text-sm text-gray-400 leading-7 mb-8">
                     As a leading web development company, we provide innovative web solutions to clients across a wide range of industries worldwide.
                     </p>
                 </div>
@@ -36,7 +36,7 @@ const IndustrySection: React.FC = () => {
                     {industries.map((industry, index) => (
                         <div
                             key={index}
-                            className="flex flex-col items-center p-6 border rounded-lg text-[#e24156] transition-transform duration-300 hover:text-black hover:scale-105"
+                            className="flex flex-col items-center p-6 border rounded-lg bg-white hover:bg-red-600 text-[#e24156] transition-transform duration-300 hover:text-white hover:scale-105"
                         >
                             <div className="2xl:text-5xl text-4xl mb-4">
                                 <i className={`fas fa-${industry.icon}`}></i>

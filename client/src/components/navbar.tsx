@@ -31,7 +31,7 @@ export function Navbar() {
   };
 
   return (
-    <nav className="fixed w-full z-50 bg-transparent backdrop-blur-sm shadow-none dark:bg-black/70 dark:shadow-md transition-colors duration-300 h-24">
+    <nav className="fixed w-full z-50 bg-transparent backdrop-blur-sm shadow-none transition-colors duration-300 h-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-24 items-center">
           {/* Logo Section */}
@@ -51,35 +51,35 @@ export function Navbar() {
               <Button
                 onClick={() => scrollToSection("services")}
                 variant="ghost"
-                className="text-gray-100 hover:text-white hover:bg-gray-800 text-xl font-semibold"
+                className="text-red-400 hover:text-white hover:bg-gray-800 text-xl font-semibold"
               >
                 Services
               </Button>
               <Button
                 onClick={() => scrollToSection("portfolio")}
                 variant="ghost"
-                className="text-gray-100 hover:text-white hover:bg-gray-800 text-xl font-semibold"
+                className="text-red-400 hover:text-white hover:bg-gray-800 text-xl font-semibold"
               >
                 Portfolio
               </Button>
               <Button
                 onClick={() => scrollToSection("about")}
                 variant="ghost"
-                className="text-gray-100 hover:text-white hover:bg-gray-800 text-xl font-semibold"
+                className="text-red-400 hover:text-white hover:bg-gray-800 text-xl font-semibold"
               >
                 About Us
               </Button>
               <Button
                 onClick={() => scrollToSection("testimonials")}
                 variant="ghost"
-                className="text-gray-100 hover:text-white hover:bg-gray-800 text-xl font-semibold"
+                className="text-red-400 hover:text-white hover:bg-gray-800 text-xl font-semibold"
               >
                 Testimonials
               </Button>
               <Link href="/careers">
                 <Button
                   variant="ghost"
-                  className="text-gray-100 hover:text-white hover:bg-gray-800 text-xl font-semibold"
+                  className="text-red-400 hover:text-white hover:bg-gray-800 text-xl font-semibold"
                 >
                   Careers
                 </Button>
