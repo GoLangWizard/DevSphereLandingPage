@@ -31,63 +31,62 @@ export function Navbar() {
   };
 
   return (
-    <nav className="fixed w-full z-50 bg-transparent backdrop-blur-sm shadow-none dark:bg-black/70 dark:shadow-md transition-colors duration-300">
+    <nav className="fixed w-full z-50 bg-transparent backdrop-blur-sm shadow-none dark:bg-black/70 dark:shadow-md transition-colors duration-300 h-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 items-center">
+        <div className="flex justify-between h-24 items-center">
           {/* Logo Section */}
           <div className="flex-shrink-0 flex items-center">
             <Link href="/">
               <img
                 src="/logo.png" // Replace with the actual path to your logo
                 alt="DevSphere Logo"
-                className="h-14 w-auto"
-
+                className="h-20 w-auto object-contain overflow-visible"
               />
             </Link>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:block">
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-8">
               <Button
                 onClick={() => scrollToSection("services")}
                 variant="ghost"
-                className="text-gray-300 hover:text-white hover:bg-red-800"
+                className="text-gray-100 hover:text-white hover:bg-gray-800 text-xl font-semibold"
               >
                 Services
               </Button>
               <Button
                 onClick={() => scrollToSection("portfolio")}
                 variant="ghost"
-                className="text-red-300 hover:text-white hover:bg-red-800"
+                className="text-gray-100 hover:text-white hover:bg-gray-800 text-xl font-semibold"
               >
                 Portfolio
               </Button>
               <Button
                 onClick={() => scrollToSection("about")}
                 variant="ghost"
-                className="text-red-300 hover:text-white hover:bg-red-800"
+                className="text-gray-100 hover:text-white hover:bg-gray-800 text-xl font-semibold"
               >
                 About Us
               </Button>
               <Button
                 onClick={() => scrollToSection("testimonials")}
                 variant="ghost"
-                className="text-red-300 hover:text-white hover:bg-red-800"
+                className="text-gray-100 hover:text-white hover:bg-gray-800 text-xl font-semibold"
               >
                 Testimonials
               </Button>
               <Link href="/careers">
                 <Button
                   variant="ghost"
-                  className="w-full justify-start text-red-300 hover:text-white hover:bg-red-800"
+                  className="text-gray-100 hover:text-white hover:bg-gray-800 text-xl font-semibold"
                 >
                   Careers
                 </Button>
               </Link>
               <Button
                 onClick={() => scrollToSection("contact")}
-                className="ml-4 text-white bg-primary hover:bg-primary/90"
+                className="ml-4 text-white bg-primary hover:bg-primary/90 text-xl font-semibold"
               >
                 Contact Us
               </Button>
@@ -101,7 +100,7 @@ export function Navbar() {
               variant="ghost"
               size="icon"
               aria-label="Toggle menu"
-              className="text-gray-300 hover:text-white hover:bg-gray-800"
+              className="text-gray-100 hover:text-white hover:bg-gray-800"
             >
               {isMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -120,34 +119,34 @@ export function Navbar() {
             <Button
               onClick={() => scrollToSection("services")}
               variant="ghost"
-              className="w-full justify-start text-gray-300 hover:text-white hover:bg-gray-800"
+              className="w-full justify-start text-gray-100 hover:text-white hover:bg-gray-800 text-lg font-semibold"
             >
               Services
             </Button>
             <Button
               onClick={() => scrollToSection("portfolio")}
               variant="ghost"
-              className="w-full justify-start text-gray-300 hover:text-white hover:bg-gray-800"
+              className="w-full justify-start text-gray-100 hover:text-white hover:bg-gray-800 text-lg font-semibold"
             >
               Portfolio
             </Button>
             <Button
               onClick={() => scrollToSection("about")}
               variant="ghost"
-              className="w-full justify-start text-gray-300 hover:text-white hover:bg-gray-800"
+              className="w-full justify-start text-gray-100 hover:text-white hover:bg-gray-800 text-lg font-semibold"
             >
               About Us
             </Button>
             <Button
               onClick={() => scrollToSection("testimonials")}
               variant="ghost"
-              className="w-full justify-start text-gray-300 hover:text-white hover:bg-gray-800"
+              className="w-full justify-start text-gray-100 hover:text-white hover:bg-gray-800 text-lg font-semibold"
             >
               Testimonials
             </Button>
             <Button
               onClick={() => scrollToSection("contact")}
-              className="w-full text-white bg-primary hover:bg-primary/90"
+              className="w-full text-white bg-primary hover:bg-primary/90 text-lg font-semibold"
             >
               Contact Us
             </Button>

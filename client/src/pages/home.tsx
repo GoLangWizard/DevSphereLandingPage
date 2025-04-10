@@ -7,10 +7,12 @@ import { FeaturesSection } from "@/components/features-section";
 import { AboutSection } from "@/components/about-section";
 import { TestimonialsSection } from "@/components/testimonials-section";
 import { Footer } from "@/components/footer";
+import MouseGlow from "@/components/mouseglow";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white font-sans text-gray-800">
+      <MouseGlow />
       <Navbar />
       <HeroSection />
       <StatsSection />
