@@ -31,66 +31,52 @@ export function Navbar() {
   };
 
   return (
-    <nav className="fixed w-full z-50 bg-transparent backdrop-blur-sm shadow-none transition-colors duration-300 h-24">
+    <nav className="fixed z-50 w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-24 items-center">
+        <div className="flex justify-between items-center h-16 bg-transparent backdrop-blur-md rounded-full px-6 shadow-lg transition-all duration-300 ease-in-out">
           {/* Logo Section */}
-          <div className="flex-shrink-0 flex items-center">
+          <div className="flex-shrink-0">
             <Link href="/">
               <img
                 src="/logo.png" // Replace with the actual path to your logo
-                alt="DevSphere Logo"
-                className="h-20 w-auto object-contain overflow-visible"
+                alt="Logo"
+                className="h-10 w-auto"
               />
             </Link>
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:block">
-            <div className="flex items-center space-x-8">
-              <Button
-                onClick={() => scrollToSection("services")}
-                variant="ghost"
-                className="text-red-400 hover:text-white hover:bg-gray-800 text-xl font-semibold"
-              >
-                Services
-              </Button>
-              <Button
-                onClick={() => scrollToSection("portfolio")}
-                variant="ghost"
-                className="text-red-400 hover:text-white hover:bg-gray-800 text-xl font-semibold"
-              >
-                Portfolio
-              </Button>
-              <Button
-                onClick={() => scrollToSection("about")}
-                variant="ghost"
-                className="text-red-400 hover:text-white hover:bg-gray-800 text-xl font-semibold"
-              >
-                About Us
-              </Button>
-              <Button
-                onClick={() => scrollToSection("testimonials")}
-                variant="ghost"
-                className="text-red-400 hover:text-white hover:bg-gray-800 text-xl font-semibold"
-              >
-                Testimonials
-              </Button>
-              <Link href="/careers">
-                <Button
-                  variant="ghost"
-                  className="text-red-400 hover:text-white hover:bg-gray-800 text-xl font-semibold"
-                >
-                  Careers
-                </Button>
-              </Link>
-              <Button
-                onClick={() => scrollToSection("contact")}
-                className="ml-4 text-white bg-primary hover:bg-primary/90 text-xl font-semibold"
-              >
-                Contact Us
-              </Button>
-            </div>
+          <div className="hidden md:flex space-x-6">
+            <Button
+              onClick={() => scrollToSection("home")}
+              variant="ghost"
+              className="text-white hover:text-gray-300 text-lg font-medium bg-red-500 rounded-full"            >
+              Home
+            </Button>
+            <Button
+              onClick={() => scrollToSection("blogs")}
+              variant="ghost"
+              className="text-white hover:text-gray-300 text-lg font-medium bg-red-500 rounded-full"            >
+              Blogs
+            </Button>
+            <Button
+              onClick={() => scrollToSection("projects")}
+              variant="ghost"
+              className="text-white hover:text-gray-300 text-lg font-medium bg-red-500 rounded-full"            >
+              Projects
+            </Button>
+            <Button
+              onClick={() => scrollToSection("content")}
+              variant="ghost"
+              className="text-white hover:text-gray-300 text-lg font-medium bg-red-500 rounded-full"            >
+              Content
+            </Button>
+            <Button
+              onClick={() => scrollToSection("contact")}
+              variant="ghost"
+              className="text-white hover:text-gray-300 text-lg font-medium bg-red-500 rounded-full"            >
+              Contact
+            </Button>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -100,7 +86,7 @@ export function Navbar() {
               variant="ghost"
               size="icon"
               aria-label="Toggle menu"
-              className="text-gray-100 hover:text-white hover:bg-gray-800"
+              className="text-white hover:text-gray-300"
             >
               {isMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -114,43 +100,56 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/70 shadow-md">
-            <Button
-              onClick={() => scrollToSection("services")}
-              variant="ghost"
-              className="w-full justify-start text-gray-100 hover:text-white hover:bg-gray-800 text-lg font-semibold"
-            >
-              Services
-            </Button>
-            <Button
-              onClick={() => scrollToSection("portfolio")}
-              variant="ghost"
-              className="w-full justify-start text-gray-100 hover:text-white hover:bg-gray-800 text-lg font-semibold"
-            >
-              Portfolio
-            </Button>
-            <Button
-              onClick={() => scrollToSection("about")}
-              variant="ghost"
-              className="w-full justify-start text-gray-100 hover:text-white hover:bg-gray-800 text-lg font-semibold"
-            >
-              About Us
-            </Button>
-            <Button
-              onClick={() => scrollToSection("testimonials")}
-              variant="ghost"
-              className="w-full justify-start text-gray-100 hover:text-white hover:bg-gray-800 text-lg font-semibold"
-            >
-              Testimonials
-            </Button>
-            <Button
-              onClick={() => scrollToSection("contact")}
-              className="w-full text-white bg-primary hover:bg-primary/90 text-lg font-semibold"
-            >
-              Contact Us
-            </Button>
-          </div>
+        <div className="md:hidden bg-gray-800/80 backdrop-blur-md rounded-lg shadow-lg mt-2 px-4 py-3">
+          <Button
+            onClick={() => scrollToSection("home")}
+            variant="ghost"
+            className="w-full text-left text-white hover:text-gray-300 text-lg font-medium bg-red-500 rounded-full"
+          >
+            Home
+          </Button>
+          <Button
+            onClick={() => scrollToSection("experience")}
+            variant="ghost"
+            className="w-full text-left text-white hover:text-gray-300 text-lg font-medium bg-red-500 rounded-full"
+          >
+            Experience
+          </Button>
+          <Button
+            onClick={() => scrollToSection("skills")}
+            variant="ghost"
+            className="w-full text-left text-white hover:text-gray-300 text-lg font-medium bg-red-500 rounded-full"
+          >
+            Skills
+          </Button>
+          <Button
+            onClick={() => scrollToSection("blogs")}
+            variant="ghost"
+            className="w-full text-left text-white hover:text-gray-300 text-lg font-medium bg-red-500 rounded-full"
+          >
+            Blogs
+          </Button>
+          <Button
+            onClick={() => scrollToSection("projects")}
+            variant="ghost"
+            className="w-full text-left text-white hover:text-gray-300 text-lg font-medium bg-red-500 rounded-full"
+          >
+            Projects
+          </Button>
+          <Button
+            onClick={() => scrollToSection("content")}
+            variant="ghost"
+            className="w-full text-left text-white hover:text-gray-300 text-lg font-medium bg-red-500 rounded-full"
+          >
+            Content
+          </Button>
+          <Button
+            onClick={() => scrollToSection("contact")}
+            variant="ghost"
+            className="w-full text-left text-white hover:text-gray-300 text-lg font-medium bg-red-500 rounded-full"
+          >
+            Contact
+          </Button>
         </div>
       )}
     </nav>

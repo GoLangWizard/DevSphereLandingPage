@@ -2,22 +2,22 @@ import React from "react";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const industries = [
-    { name: "eCommerce", icon: "shopping-cart" },
+    { name: "AI", icon: "robot" },
     { name: "Fintech", icon: "credit-card" },
-    { name: "Healthcare", icon: "heartbeat" },
     { name: "Education", icon: "graduation-cap" },
+    { name: "Business", icon: "briefcase" },
+    { name: "eCommerce", icon: "shopping-cart" },
+    { name: "Logistics", icon: "truck" },
+    { name: "Tech & IT", icon: "laptop" },
     { name: "Social Networking", icon: "users" },
     { name: "Hospitality", icon: "hotel" },
     { name: "Entertainment", icon: "film" },
     { name: "Government", icon: "university" },
     { name: "Real Estate", icon: "building" },
-    { name: "Business", icon: "briefcase" },
-    { name: "Logistics", icon: "truck" },
-    { name: "Tech & IT", icon: "laptop" },
+    { name: "Healthcare", icon: "heartbeat" },
     { name: "Non-Profit", icon: "hands-helping" },
     { name: "Automotive", icon: "car" },
     { name: "Travel & Tourism", icon: "plane" },
-    { name: "AI", icon: "robot" },
 ];
 
 const IndustrySection: React.FC = () => {
@@ -36,7 +36,7 @@ const IndustrySection: React.FC = () => {
                     {industries.map((industry, index) => (
                         <div
                             key={index}
-                            className="flex flex-col items-center p-6 border rounded-lg bg-white hover:bg-red-600 text-[#e24156] transition-transform duration-300 hover:text-white hover:scale-105"
+                            className="flex flex-col items-center p-6 border rounded-lg hover:bg-red-600 text-[#e24156] transition-transform duration-300 hover:text-white hover:scale-105 bg-transparent backdrop-blur-md"
                         >
                             <div className="2xl:text-5xl text-4xl mb-4">
                                 <i className={`fas fa-${industry.icon}`}></i>

@@ -9,11 +9,9 @@ import { TestimonialsSection } from "@/components/testimonials-section";
 import { Footer } from "@/components/footer";
 import MouseGlow from "@/components/mouseglow";
 
-import '../styles/globals.css'; // adjust path as needed
-
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white font-sans text-gray-800">
+    <div className="min-h-screen bg-white font-sans text-red-800">
       <MouseGlow />
       <Navbar />
       <HeroSection />
